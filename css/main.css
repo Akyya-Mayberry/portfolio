@@ -18,6 +18,7 @@ body {
     color: #2d3c49;
 }
 
+
 /* Header */
 header {
     text-transform: uppercase;
@@ -37,6 +38,8 @@ header {
     font-weight: normal;
 }
 
+
+/* Hero */
 .hero-image {
     margin: 30px 0;
     align-items: center;
@@ -44,4 +47,28 @@ header {
     height: 400px;
     background-image: url('../img/random.jpeg');
     background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/* Featured Section */
+.feature-section-title {
+    color: #7d97ad;
+    margin-left: 10px;
+}
+
+.featured-work {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 15px 0;
+    color: #2d3c49;
+}
+
+.project-details {
+    text-align: center;
+}
+
+.project-title {
+    text-transform: uppercase;
 }
