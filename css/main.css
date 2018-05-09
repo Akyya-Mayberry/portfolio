@@ -12,16 +12,9 @@ video {
     max-width: 100%;
 }
 
-html {
-    font-size: 16px;
-}
-
 body {
     background: #fff;
-    font-weight: 100;
-    font-family:  "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
+    font: normal 16px 1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #2d3c49;
 }
 
@@ -89,11 +82,7 @@ body {
     margin: 20px 0;
     align-items: center;
     width: 100vw;
-    /* background-image: transparent url(https://pixabay.com/get/e832b7082df2033ecd1f410de54e4490e36ae3d01bb4194996f4c379/doors-1767562.jpg) no-repeat center center; */
-    /* background-image: url('');
-    background-size: cover;
-    background-position: 25% 75%;
-    background-repeat: no-repeat; */
+    /* background-image: transparent cover url(https://pixabay.com/get/e832b7082df2033ecd1f410de54e4490e36ae3d01bb4194996f4c379/doors-1767562.jpg) no-repeat center center; */
     flex: 1;
     position: relative;
 }
@@ -130,6 +119,7 @@ body {
     /* margin: auto; centers the project inside the projects container*/
     padding: 1.5em;
     max-width: 300px;
+    margin: 20px;
     margin-bottom: 1.5em;
     position: relative;
     border: 0.5px solid green;
@@ -138,7 +128,6 @@ body {
 }
 
 .project-details {
-    /* text-align: right; */
     background-color: antiquewhite;
     padding: 0 0 1.3em 0;
 }
@@ -152,7 +141,7 @@ body {
     padding-right: 3px;
     width: 100%;
     color: white;
-    font-size: 4vmin;
+    font-size: 3.5vmin;
 }
 
 .project-description {
