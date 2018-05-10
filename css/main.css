@@ -86,18 +86,33 @@ body {
 }
 
 
+/* Main Section */
+.main-flex {
+    order: 5;
+    display: flex;
+    flex: 5;
+    flex-flow: column;
+    justify-content: center;
+    align-self: center; /* Align me in the center of my parent */
+    align-items: center; /* align my children on my right */
+    max-width: 100%;  
+    background: yellow;
+}
+
 /* Hero */
 .hero {
-    margin: 20px 0;
+    flex: 7 2 auto;
     align-items: center;
     width: 100vw;
-    /* background-image: transparent cover url(https://pixabay.com/get/e832b7082df2033ecd1f410de54e4490e36ae3d01bb4194996f4c379/doors-1767562.jpg) no-repeat center center; */
-    flex: 1;
+    height: 400px;
+    background: center center / cover no-repeat #2d3c49 url("http://www.creative-commons-images.com/highway-signs/images/google.jpg");
+    margin: 20px 0;
     position: relative;
 }
 
 .hero-image {
-    width: 100vw;
+    width: 1px;
+    height: 1px;
 }
 
 
