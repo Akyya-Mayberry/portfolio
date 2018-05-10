@@ -18,9 +18,9 @@ body {
     color: #2d3c49;
 }
 
-.main-container {
+.main-container-flex {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column;
     justify-content: space-between;
     min-height: 100vh;
     max-width: 100%;
@@ -29,55 +29,60 @@ body {
 
 
 /* Header */
-.header-section {
+.header-flex {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 5px solid #7d97ad;
-    padding: 10px 10px;
-    flex: 1 100%;
-}
-
-.main-header {
-    display: flex;
+    flex: 1;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-    max-width: 100%;  
-    flex: 1 1 auto;
-} 
+    border-bottom: 5px solid #7d97ad;
+    padding: 10px;
+    background: red;
+}
 
-.sub-header {
+.sub-header-flex {
+    order: 2;
     display: flex;
-    flex-flow: column wrap;
-    flex: 2 0 auto;
+    flex: 3 0 auto; /* set basis to auto because font-size controls basis */
+    flex-flow: column;
     justify-content: flex-end;
-    align-items: flex-end;
+    align-self: center; /* Align me in the center of my parent */
+    align-items: flex-start; /* align my children on my right */
     max-width: 100%;  
     text-transform: uppercase;
     /* order: 2; */
+    background: blue;
 }
 
 .logo {
+    order: 1;
+    flex: 0 6 20%;
+    align-self: center;
+    width: 250px;
+    height: auto; /* maintains aspect ratio */
     min-width: 0;
     min-height: 0;
     padding: 5px;
-    /* order: 1; */
-    align-self: flex-start;
-    flex: 0 3 auto;
-    height: auto; /* Important - maintains aspect ration */
+    /* object-fit: contain; maintain aspect ration but not supported by IE*/
 }
 
 .name {
-    font-size: 7vw;
+    order: 3;
     align-self: flex-end;
+    font-size: 7vw;
+    background: green;
+    padding: 0;
+    margin: 0;
 }
 
 .job-title {
+    order: 4;
+    align-self: flex-end;
     font-size: 4vw;
     color: salmon;
-    align-self: flex-end;
+    padding: 0;
+    margin: 0;
+    background: pink;    
 }
 
 
