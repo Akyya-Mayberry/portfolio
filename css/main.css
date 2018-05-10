@@ -56,24 +56,28 @@ body {
     align-items: flex-end;
     max-width: 100%;  
     text-transform: uppercase;
-    order: 2;
+    /* order: 2; */
 }
 
 .logo {
-    flex: 1 100% auto;
     min-width: 0;
     min-height: 0;
     padding: 5px;
-    order: 1;
+    /* order: 1; */
+    align-self: flex-start;
+    flex: 0 3 auto;
+    height: auto; /* Important - maintains aspect ration */
 }
 
 .name {
     font-size: 7vw;
+    align-self: flex-end;
 }
 
 .job-title {
     font-size: 4vw;
     color: salmon;
+    align-self: flex-end;
 }
 
 
@@ -147,7 +151,6 @@ body {
 .project-description {
     text-align: left;
     height: 50px;
-    white-space: pre-wrap;
     overflow: scroll;
     padding: 0.5em;
     font-weight: bold;
@@ -156,6 +159,9 @@ body {
 
 .project-img {
     text-align: left;
+    width: 300px;
+    height: 200px;
+    align-self: auto;
 }
 
 a:hover {
