@@ -117,30 +117,43 @@ body {
 
 
 /* Featured Section */
-.feature-section-title {
+.featured-work-flex {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    flex: 1;
+    align-self: center;
+    margin: 15px;
+    color: #2d3c49;
+    width: 100%;
+    background-color: green;
+}
+
+header.featured-work-header {
+    align-self: flex-start;
+}
+
+.featured-main-flex {
+    display: flex;
+    align-self: center;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+h2.featured-section-title {
     color: #7d97ad;
     margin-left: 10px;
     font-size: 5vw;    
-    flex: 2 100%;
-}
-
-.featured-work {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: space-between;
-    margin: 15px;
-    color: #2d3c49;
-    flex: 1 100%;
-}
-
-.projects {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
+    flex: 2;
+    width: 100%;
+    background: black;
 }
 
 .project {
     /* margin: auto; centers the project inside the projects container*/
+    align-self: center;
     padding: 1.5em;
     max-width: 300px;
     margin: 20px;
@@ -149,6 +162,7 @@ body {
     border: 0.5px solid green;
     box-shadow: 5px 10px 7px #888888;
     z-index: 0;
+    background-color: orange;
 }
 
 .project-details {
@@ -165,7 +179,7 @@ body {
     padding-right: 3px;
     width: 100%;
     color: white;
-    font-size: 3.5vmin;
+    font-size: 4vmin;
 }
 
 .project-description {
@@ -181,7 +195,8 @@ body {
     text-align: left;
     width: 300px;
     height: 200px;
-    align-self: auto;
+    align-self: center;
+    padding: 20px;
 }
 
 a:hover {
