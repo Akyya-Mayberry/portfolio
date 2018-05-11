@@ -18,10 +18,6 @@ body {
     font: normal 16px 1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #2d3c49;
     width: 100%;
-    max-width: 1230px;
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
 }
 
 .main-container-flex {
@@ -250,4 +246,13 @@ a:hover {
     .featured-work-header h2.featured-section-title {
         font-size: 50px;
     }
+}
+
+@media screen and (min-width: 1230px) {
+  .main-container-flex {
+    max-width: 1230px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
