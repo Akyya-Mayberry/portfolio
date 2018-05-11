@@ -25,7 +25,6 @@ body {
     flex-flow: column;
     justify-content: space-between;
     min-height: 100%;
-    max-width: 1280px;
     width: 100%;
     margin: 0 auto;
 }
@@ -40,7 +39,6 @@ body {
     align-items: center;
     border-bottom: 5px solid #7d97ad;
     padding: 10px;
-    background: red;
     max-width: 100%;
 }
 
@@ -55,7 +53,6 @@ body {
     max-width: 100%;  
     text-transform: uppercase;
     /* order: 2; */
-    background: blue;
 }
 
 .logo {
@@ -75,7 +72,6 @@ body {
     order: 3;
     align-self: flex-end;
     font-size: 7vw;
-    background: green;
     padding: 0;
     margin: 0;
     max-width: 100%;
@@ -89,7 +85,6 @@ body {
     color: salmon;
     padding: 0;
     margin: 0;
-    background: pink;
     max-width: 100%;  
 }
 
@@ -98,23 +93,22 @@ body {
 .main-flex {
     order: 5;
     display: flex;
-    flex: 1;
+    flex: 1 2 20%;
     flex-flow: column;
     justify-content: center;
     align-self: center; /* Align me in the center of my parent */
     align-items: center; /* align my children on my right */
     max-width: 100%;  
-    background: yellow;
 }
 
 /* Hero */
 .hero {
-    flex: 2 2 auto;
+    flex: 2 5 auto;
     align-items: center;
     width: 100vw;
     height: 400px;
     background: center center / cover no-repeat #2d3c49 url("http://www.creative-commons-images.com/highway-signs/images/google.jpg");
-    margin: 20px 0;
+    margin: 10px 0;
     position: relative;
     max-width: 100%;
 }
@@ -135,7 +129,6 @@ body {
     margin: 15px;
     color: #2d3c49;
     width: 100%;
-    background-color: green;
 }
 
 header.featured-work-header {
@@ -151,13 +144,12 @@ header.featured-work-header {
     width: 100%;
 }
 
-h2.featured-section-title {
+.featured-work-header h2.featured-section-title {
     color: #7d97ad;
     margin-left: 10px;
-    font-size: 5vw;    
+    font-size: 3.5vmax;    
     flex: 2;
     width: 100%;
-    background: black;
 }
 
 article.project {
@@ -169,10 +161,10 @@ article.project {
     margin: 20px;
     margin-bottom: 1.5em;
     position: relative;
-    border: 0.5px solid green;
+    border: 0.5px solid rgb(219, 225, 219);
     box-shadow: 5px 10px 7px #888888;
     z-index: 0;
-    background-color: orange;
+    /* background-color: rgba(208, 236, 231, 1); */
 }
 
 .project-header {
@@ -193,13 +185,13 @@ article.project {
     padding-right: 3px;
     width: 100%;
     color: white;
-    font-size: 4vmin;
+    font-size: 1.8rem;
 }
 
 .project-description {
     text-align: left;
     height: 50px;
-    overflow: scroll;
+    overflow: hidden;
     padding: 0.5em;
     font-weight: bold;
     color: rgb(40, 55, 71);
@@ -208,7 +200,7 @@ article.project {
 img.project-img {
     /* width: 300px; */
     /* height: 200px; */
-    max-width: 100%;
+    /* max-width: 100%; */
     height: auto;
     /* width: 100%; */
     align-self: center;
