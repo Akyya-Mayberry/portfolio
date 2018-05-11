@@ -218,7 +218,28 @@ a:hover {
 }
 
 .project-link:hover {
-    background: #eee;
+    background: salmon;
+    color: white;
+}
+
+.footer-flex {
+    order: 200;
+    display: flex;
+    flex-direction: row nowrap;
+    font-size: 1.3rem;
+    margin: 0;
+    align-self: center;
+    justify-content: flex-end;
+    align-items: baseline;
+    width: 100%;
+    border-top: 1px solid lightgray;
+    /* background-color: purple; */
+}
+
+.social-link {
+    font-size: 40px;
+    align-self: center;
+    margin: 20px;
 }
 
 @media screen and (min-width: 980px) {
