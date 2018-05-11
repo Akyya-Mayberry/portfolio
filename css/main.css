@@ -6,6 +6,7 @@
 }
 
 img,
+picture,
 embed, 
 object, 
 video {
@@ -16,28 +17,31 @@ body {
     background: #fff;
     font: normal 16px 1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #2d3c49;
+    width: 100%;
 }
 
 .main-container-flex {
     display: flex;
     flex-flow: column;
     justify-content: space-between;
-    min-height: 100vh;
-    max-width: 100%;
+    min-height: 100%;
+    max-width: 1280px;
     width: 100%;
+    margin: 0 auto;
 }
 
 
 /* Header */
 .header-flex {
     display: flex;
-    flex: 1;
+    flex: 2;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
     border-bottom: 5px solid #7d97ad;
     padding: 10px;
     background: red;
+    max-width: 100%;
 }
 
 .sub-header-flex {
@@ -56,12 +60,13 @@ body {
 
 .logo {
     order: 1;
-    flex: 0 6 20%;
+    flex: 0 4 20%;
     align-self: center;
     width: 250px;
     height: auto; /* maintains aspect ratio */
     min-width: 0;
     min-height: 0;
+    max-width: 100%;
     padding: 5px;
     /* object-fit: contain; maintain aspect ration but not supported by IE*/
 }
@@ -73,6 +78,8 @@ body {
     background: green;
     padding: 0;
     margin: 0;
+    max-width: 100%;
+    
 }
 
 .job-title {
@@ -82,7 +89,8 @@ body {
     color: salmon;
     padding: 0;
     margin: 0;
-    background: pink;    
+    background: pink;
+    max-width: 100%;  
 }
 
 
@@ -90,7 +98,7 @@ body {
 .main-flex {
     order: 5;
     display: flex;
-    flex: 5;
+    flex: 1;
     flex-flow: column;
     justify-content: center;
     align-self: center; /* Align me in the center of my parent */
@@ -101,13 +109,14 @@ body {
 
 /* Hero */
 .hero {
-    flex: 7 2 auto;
+    flex: 2 2 auto;
     align-items: center;
     width: 100vw;
     height: 400px;
     background: center center / cover no-repeat #2d3c49 url("http://www.creative-commons-images.com/highway-signs/images/google.jpg");
     margin: 20px 0;
     position: relative;
+    max-width: 100%;
 }
 
 .hero-image {
@@ -151,8 +160,9 @@ h2.featured-section-title {
     background: black;
 }
 
-.project {
+article.project {
     /* margin: auto; centers the project inside the projects container*/
+    flex: 1 6 auto;
     align-self: center;
     padding: 1.5em;
     max-width: 300px;
@@ -163,6 +173,10 @@ h2.featured-section-title {
     box-shadow: 5px 10px 7px #888888;
     z-index: 0;
     background-color: orange;
+}
+
+.project-header {
+    text-align: center;
 }
 
 .project-details {
@@ -191,12 +205,14 @@ h2.featured-section-title {
     color: rgb(40, 55, 71);
 }
 
-.project-img {
-    text-align: left;
-    width: 300px;
-    height: 200px;
+img.project-img {
+    /* width: 300px; */
+    /* height: 200px; */
+    max-width: 100%;
+    height: auto;
+    /* width: 100%; */
     align-self: center;
-    padding: 20px;
+    /* padding: 20px; */
 }
 
 a:hover {
