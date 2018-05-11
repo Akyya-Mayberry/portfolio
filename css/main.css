@@ -201,11 +201,7 @@ article.project {
 }
 
 img.project-img {
-    /* width: 300px; */
-    /* height: 200px; */
-    /* max-width: 100%; */
     height: auto;
-    /* width: 100%; */
     align-self: center;
     /* padding: 20px; */
 }
