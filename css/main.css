@@ -6,6 +6,7 @@
 }
 
 img,
+picture,
 embed, 
 object, 
 video {
@@ -16,115 +17,161 @@ body {
     background: #fff;
     font: normal 16px 1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #2d3c49;
+    width: 100%;
+    max-width: 1230px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
 }
 
-.main-container {
+.main-container-flex {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column;
     justify-content: space-between;
-    min-height: 100vh;
-    max-width: 100%;
+    min-height: 100%;
     width: 100%;
+    margin: 0 auto;
+    max-width: 100%;
 }
 
 
 /* Header */
-.header-section {
+.header-flex {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 5px solid #7d97ad;
-    padding: 10px 10px;
-    flex: 1 100%;
-}
-
-.main-header {
-    display: flex;
+    flex: 2;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-    max-width: 100%;  
-    flex: 1 1 auto;
-} 
+    border-bottom: 5px solid #7d97ad;
+    padding: 10px;
+    max-width: 100%;
+}
 
-.sub-header {
+.sub-header-flex {
+    order: 2;
     display: flex;
-    flex-flow: column wrap;
-    flex: 2 0 auto;
+    flex: 3 0 auto; /* set basis to auto because font-size controls basis */
+    flex-flow: column;
     justify-content: flex-end;
-    align-items: flex-end;
+    align-self: center; /* Align me in the center of my parent */
+    align-items: flex-start; /* align my children on my right */
     max-width: 100%;  
     text-transform: uppercase;
-    order: 2;
+    /* order: 2; */
 }
 
 .logo {
-    flex: 1 100% auto;
+    order: 1;
+    flex: 0 4 20%;
+    align-self: center;
+    width: 250px;
+    height: auto; /* maintains aspect ratio */
     min-width: 0;
     min-height: 0;
+    max-width: 100%;
     padding: 5px;
-    order: 1;
+    /* object-fit: contain; maintain aspect ration but not supported by IE*/
 }
 
 .name {
-    font-size: 7vw;
+    order: 3;
+    align-self: flex-end;
+    font-size: 6vw;
+    padding: 0;
+    margin: 0;
 }
 
 .job-title {
-    font-size: 4vw;
+    order: 4;
+    align-self: flex-end;
+    font-size: 2.5vw;
     color: salmon;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;  
 }
 
+
+/* Main Section */
+.main-flex {
+    order: 5;
+    display: flex;
+    flex: 1 2 20%;
+    flex-flow: column;
+    justify-content: center;
+    align-self: center; /* Align me in the center of my parent */
+    align-items: center; /* align my children on my right */
+    max-width: 100%;  
+}
 
 /* Hero */
 .hero {
-    margin: 20px 0;
+    flex: 2 5 auto;
     align-items: center;
     width: 100vw;
-    /* background-image: transparent cover url(https://pixabay.com/get/e832b7082df2033ecd1f410de54e4490e36ae3d01bb4194996f4c379/doors-1767562.jpg) no-repeat center center; */
-    flex: 1;
+    height: 400px;
+    background: center center / cover no-repeat #2d3c49 url("http://www.creative-commons-images.com/highway-signs/images/google.jpg");
+    margin: 10px 0;
     position: relative;
+    max-width: 100%;
 }
 
 .hero-image {
-    width: 100vw;
+    width: 1px;
+    height: 1px;
 }
 
 
 /* Featured Section */
-.feature-section-title {
-    color: #7d97ad;
-    margin-left: 10px;
-    font-size: 5vw;    
-    flex: 2 100%;
-}
-
-.featured-work {
+.featured-work-flex {
     display: flex;
-    flex-flow: column wrap;
-    justify-content: space-between;
+    flex-flow: column;
+    justify-content: center;
+    flex: 1;
+    align-self: center;
     margin: 15px;
     color: #2d3c49;
-    flex: 1 100%;
+    width: 100%;
 }
 
-.projects {
+header.featured-work-header {
+    align-self: flex-start;
+}
+
+.featured-main-flex {
     display: flex;
+    align-self: center;
     flex-flow: row wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
 }
 
-.project {
+.featured-work-header h2.featured-section-title {
+    color: #7d97ad;
+    margin-left: 10px;
+    font-size: 3.5vmax;    
+    flex: 2;
+    width: 100%;
+}
+
+article.project {
     /* margin: auto; centers the project inside the projects container*/
+    flex: 1 6 auto;
+    align-self: center;
     padding: 1.5em;
     max-width: 300px;
     margin: 20px;
     margin-bottom: 1.5em;
     position: relative;
-    border: 0.5px solid green;
+    border: 0.5px solid rgb(219, 225, 219);
     box-shadow: 5px 10px 7px #888888;
     z-index: 0;
+    /* background-color: rgba(208, 236, 231, 1); */
+}
+
+.project-header {
+    text-align: center;
 }
 
 .project-details {
@@ -141,21 +188,22 @@ body {
     padding-right: 3px;
     width: 100%;
     color: white;
-    font-size: 3.5vmin;
+    font-size: 1.8rem;
 }
 
 .project-description {
     text-align: left;
     height: 50px;
-    white-space: pre-wrap;
-    overflow: scroll;
+    overflow: hidden;
     padding: 0.5em;
     font-weight: bold;
     color: rgb(40, 55, 71);
 }
 
-.project-img {
-    text-align: left;
+img.project-img {
+    height: auto;
+    align-self: center;
+    /* padding: 20px; */
 }
 
 a:hover {
@@ -170,5 +218,36 @@ a:hover {
 }
 
 .project-link:hover {
-    background: #eee;
+    background: salmon;
+    color: white;
+}
+
+.footer-flex {
+    order: 200;
+    display: flex;
+    flex-direction: row nowrap;
+    font-size: 1.3rem;
+    margin: 0;
+    align-self: center;
+    justify-content: flex-end;
+    align-items: baseline;
+    width: 100%;
+    border-top: 1px solid lightgray;
+    /* background-color: purple; */
+}
+
+.social-link {
+    font-size: 40px;
+    align-self: center;
+    margin: 20px;
+}
+
+@media screen and (min-width: 980px) {
+    .name { font-size: 80px;}
+
+    .job-title {font-size: 50px;}
+
+    .featured-work-header h2.featured-section-title {
+        font-size: 50px;
+    }
 }
