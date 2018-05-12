@@ -15,7 +15,7 @@ video {
 
 body {
     background: #fff;
-    font: normal 16px 1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font: normal normal normal 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #2d3c49;
     width: 100%;
 }
@@ -221,7 +221,7 @@ a:hover {
 .footer-flex {
     order: 200;
     display: flex;
-    flex-direction: row nowrap;
+    flex-flow: row nowrap;
     font-size: 1.3rem;
     margin: 0;
     align-self: center;
@@ -229,7 +229,6 @@ a:hover {
     align-items: baseline;
     width: 100%;
     border-top: 1px solid lightgray;
-    /* background-color: purple; */
 }
 
 .social-link {
